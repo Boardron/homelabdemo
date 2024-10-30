@@ -1,0 +1,25 @@
+[api]
+  dashboard = true
+  insecure = true
+
+[providers.nomad]
+  prefix = "traefik"
+  exposedByDefault = false
+  [providers.nomad.endpoint]
+    address = "http://192.168.1.223:4646"
+
+[entryPoints]
+  [entryPoints.web]
+    address = ":80"
+
+  [entryPoints.minecraft]
+    address = ":25565"
+
+  [entryPoints.pihole]
+    address = ":53"
+
+  [entryPoints.keycloak]
+    address = ":8088"
+
+  [entryPoints.nexus]
+    address = ":8081"
