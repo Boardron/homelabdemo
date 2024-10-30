@@ -3,7 +3,7 @@ job "pihole" {
   datacenters = ["dc1"]
   
   group "pihole" {
-    count = 2
+    count = 1
 
     network {
       port "pihole-dns" {
