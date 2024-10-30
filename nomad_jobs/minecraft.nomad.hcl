@@ -18,7 +18,6 @@ job "minecraft_nfs" {
       }
       port "mc-vanilla-rcon" {
         to = 25575
-        static = 25575
       }
       mode = "bridge"
     }
