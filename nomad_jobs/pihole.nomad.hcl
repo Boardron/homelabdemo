@@ -30,6 +30,7 @@ job "pihole" {
       tags = [
         "traefik.enable=true",
         "traefik.tcp.routers.pirouter1.entrypoints=pihole",
+        "traefik.udp.routers.udppirouter1.entrypoints=piholeUDP",
         "traefik.tcp.routers.pirouter1.rule=HostSNI(`*`)"
       ]
     }
