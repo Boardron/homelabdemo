@@ -23,7 +23,7 @@ job "pihole" {
       check {
         name     = "pihole-dnsprobe"
         type     = "tcp"
-        interval = "10s"
+        interval = "20s"
         timeout  = "1s"
       }
 
