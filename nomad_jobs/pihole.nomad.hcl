@@ -5,6 +5,14 @@ job "pihole" {
   group "pihole" {
     count = 1
 
+    volume "pi_data" {
+      type      = "csi"
+      read_only = false
+      source    = "nfs_pi"
+      attachment_mode = "file-system"
+      access_mode = "multi-node-multi-writer"
+    }
+
     network {
       port "pihole-dns" {
         to = 53
@@ -57,6 +65,12 @@ job "pihole" {
 
     task "pihole-start" {
       driver = "docker"
+
+      volume_mount {
+        volume      = "pi_data"
+        destination = "/etc/pihole"
+        read_only   = false
+      }
 
       config {
         image = "pihole/pihole"
