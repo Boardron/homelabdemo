@@ -1,4 +1,4 @@
-job "minecraft_nfs" {
+job "minecraft" {
   
   datacenters = ["dc1"]
   
