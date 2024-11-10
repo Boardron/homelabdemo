@@ -77,7 +77,7 @@ job "pihole" {
         ports = ["pihole-dns","pihole-http"]
       }
       resources {
-        cpu    = 1000
+        cpu    = 2000
         memory = 1024
       }
       env {
