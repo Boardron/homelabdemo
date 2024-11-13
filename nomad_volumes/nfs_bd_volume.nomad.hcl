@@ -3,21 +3,25 @@ id = "nfs_bd"
 name = "nfs_bd"
 plugin_id = "nfs"
 
-capability {
+capability 
+{
   access_mode = "multi-node-multi-writer"
   attachment_mode = "file-system"
 }
 
-capability {
+capability 
+{
   access_mode = "single-node-writer"
   attachment_mode = "file-system"
 }
 
-context {
+context 
+{
   server = "192.168.1.224"
   share = "/srv/nfs/bd_data"
 }
 
-mount_options {
+mount_options 
+{
   fs_type = "nfs"
 } 
