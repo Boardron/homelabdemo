@@ -80,9 +80,6 @@ job "pihole" {
         cpu    = 2000
         memory = 1024
       }
-      env {
-        WEBPASSWORD = "MyPiHole"
-      }
     }
   
   }
